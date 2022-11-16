@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+      }
+
+      .phone {
+        position: relative;
+        border: 8px solid black;
+        border-radius: 40px;
+        height: 600px;
+        width: 300px;
+        background-color: #ccefff;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+          0 15px 12px rgba(0, 0, 0, 0.22);
+      }
+
+      .layer {
+        position: absolute;
+        height: 450px;
+        width: 80px;
+        background-color: white;
+        border-radius: 20px;
+      }
+
+      .land {
+        position: absolute;
+        width: 220px;
+        height: 400px;
+        bottom: 0;
+        background-color: #b7584d;
+        border-top: #58bd60 10px solid;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 2px 4px 10px black;
+      }
+
+      .layer-1 {
+        z-index: 1;
+        bottom: 0;
+        right: 60px;
+      }
+
+      .layer-2 {
+        z-index: 2;
+        bottom: 0;
+        left: 60px;
+      }
+
+      .layer-3 {
+        z-index: 3;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+
+      .layer-4 {
+        z-index: 4;
+        bottom: 0;
+        left: 30px;
+        height: 350px;
+        border-radius: 20px 20px 0 30px;
+      }
+
+      .layer-5 {
+        z-index: 5;
+        height: 300px;
+        width: 190px;
+
+        border-radius: 20px 20px 0 30px;
+      }
+
+      .layer-6 {
+        z-index: 6;
+        bottom: 0;
+        right: 30px;
+        height: 250px;
+      }
+
+      .layer-7 {
+        z-index: 7;
+
+        right: 0;
+        height: 200px;
+        width: 190px;
+        border-radius: 20px 20px 30px 0;
+      }
+
+      .layer-8 {
+        position: absolute;
+        z-index: 8;
+        bottom: 0;
+
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+
+        width: 125px;
+        height: 100px;
+        background-color: #57bd60;
+        border-radius: 50px 50px 0 0;
+      }
+
+      .layer-9 {
+        position: absolute;
+        z-index: 9;
+        bottom: 0;
+        left: 0;
+
+        width: 125px;
+        height: 110px;
+        background-color: white;
+        border-radius: 0 50px 0 30px;
+      }
+
+      .layer-10 {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 0;
+
+        width: 125px;
+        height: 110px;
+        background-color: white;
+        border-radius: 50px 0 30px 0;
+      }
+      .left-ear--outer {
+        background: black;
+        border-radius: 90%;
+        width: 10px;
+        height: 50px;
+        position: absolute;
+        left: 15px;
+      }
+
+      .left-ear--inner {
+        background: yellow;
+        border-radius: 90%;
+        width: 10px;
+        height: 50px;
+        position: absolute;
+        left: 15px;
+        top: 8px;
+      }
+
+      .right-ear--outer {
+        background: black;
+        border-radius: 90%;
+        width: 10px;
+        height: 50px;
+        position: absolute;
+        right: 15px;
+      }
+
+      .right-ear--inner {
+        background: yellow;
+        border-radius: 90%;
+        width: 10px;
+        height: 50px;
+        position: absolute;
+        right: 15px;
+        top: 8px;
+      }
+
+      .head {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        left: 7px;
+        border-radius: 100px;
+        background: yellow;
+        top: 25px;
+      }
+
+      .head__eye {
+        background: gray;
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        top: 5px;
+      }
+
+      .head__eye--left {
+        left: 40px;
+      }
+
+      .head__eye--right {
+        right: 40px;
+      }
+      .head__slap {
+        background: red;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 10px;
+      }
+      .head__slap--left {
+        left: 50px;
+      }
+      .head__slap--right {
+        right: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="phone">
+      <div class="layer layer-1">
+        <div class="left-ear--outer"></div>
+        <div class="left-ear--inner"></div>
+        <div class="right-ear--outer"></div>
+        <div class="right-ear--inner"></div>
+        <div class="head">
+          <div class="head__eye head__eye--left"></div>
+          <div class="head__eye head__eye--right"></div>
+          <div class="head__slap head__slap--left"></div>
+          <div class="head__slap head__slap--right"></div>
+        </div>
+      </div>
+      <!--bunny 1-->
+      <div class="layer layer-2"></div>
+      <!--bunny 2 -->
+      <div class="land layer-3"></div>
+      <!--wall 1 -->
+      <div class="layer layer-4"></div>
+      <!--bunny 3-->
+      <div class="land layer-5"></div>
+      <!--wall 2 -->
+      <div class="layer layer-6"></div>
+      <!--bunny 4 -->
+      <div class="land layer-7"></div>
+      <!--wall 3 -->
+      <div class="layer-8"></div>
+      <!--lawn 1 -->
+      <div class="layer-9"></div>
+      <!--lawn 2 -->
+      <div class="layer-10"></div>
+      <!--lawn 3 -->
+    </div>
+  </body>
+</html>
