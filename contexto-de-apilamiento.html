@@ -25,6 +25,16 @@
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
           0 15px 12px rgba(0, 0, 0, 0.22);
       }
+      .title {
+        display: flex;
+        justify-content: center;
+        margin: 45px 0 10px;
+      }
+
+    .title img {
+      width: 60%;
+      height:100px
+    }
 
       input[type="checkbox"] {
         /*ocultar el checkbox en el layer*/
@@ -102,7 +112,7 @@
       }
 
       .layer-2 input[type="checkbox"] {
-        /* After 4 */
+        /* After checkbox moves 4 */
         animation-name: pika;
         animation-duration: 1.5s;
         animation-timing-function: ease-in-out;
@@ -127,6 +137,13 @@
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
       }
+      .layer-4 input[type="checkbox"] {
+        /* After 4 */
+        animation-name: pika;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
 
       .layer-5 {
         z-index: 5;
@@ -141,8 +158,15 @@
         bottom: 0;
         right: 30px;
         height: 250px;
-        /* After 4 */
+        /* After 4 anmacion de pika */
         animation-name: layer;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+      .layer-6 input[type="checkbox"] {
+        /* After 4 */
+        animation-name: pika;
         animation-duration: 2s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -321,12 +345,12 @@
         text-align: center;
       }
       input:checked {
-      counter-increment: score;
-    }
+        counter-increment: score;
+      }
 
-    .score::after {
-      content: counter(score);
-    }
+      .score::after {
+        content: counter(score);
+      }
     </style>
   </head>
 
@@ -363,6 +387,7 @@
       <div class="land layer-3"></div>
       <!--wall 1 -->
       <div class="layer layer-4">
+        <input type="checkbox" />
         <div class="left-ear--outer"></div>
         <div class="left-ear--inner"></div>
         <div class="right-ear--outer"></div>
@@ -381,6 +406,7 @@
       </div>
       <!--wall 2 -->
       <div class="layer layer-6">
+        <input type="checkbox" />
         <div class="left-ear--outer"></div>
         <div class="left-ear--inner"></div>
         <div class="right-ear--outer"></div>
@@ -401,8 +427,12 @@
       <!--lawn 2 -->
       <div class="layer-10"></div>
       <!--lawn 3 -->
-      <h1 class="title">ATRAPALPIKA</h1>
-      <h2 class="score">Score:   </h2>
+      <h2 class="score">Score:</h2>
+      <h1 class="title">
+        <img src="./imgpika/pikatitle.jpg"
+        alt="Atrapalpika"
+      </h1>
+   
     </div>
   </body>
 </html>
