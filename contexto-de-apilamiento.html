@@ -12,6 +12,7 @@
         width: 100%;
         display: grid;
         place-items: center;
+        counter-reset: score;
       }
 
       .phone {
@@ -40,7 +41,7 @@
         position: absolute;
         height: 450px;
         width: 80px;
-        background-color: white;
+        /* //background-color: white; */
         border-radius: 20px;
       }
 
@@ -64,6 +65,17 @@
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
       }
+      @keyframes pika {
+        0% {
+          top: 0;
+        }
+        25% {
+          top: 80px;
+        }
+        100% {
+          top: 0;
+        }
+      }
       @keyframes layer {
         /*movimientos de pikachu*/
         0% {
@@ -83,8 +95,19 @@
         z-index: 2;
         bottom: 0;
         left: 60px;
+        animation-name: layer;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
       }
 
+      .layer-2 input[type="checkbox"] {
+        /* After 4 */
+        animation-name: pika;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
       .layer-3 {
         z-index: 3;
         left: 0;
@@ -98,6 +121,11 @@
         left: 30px;
         height: 350px;
         border-radius: 20px 20px 0 30px;
+        /* After 4 */
+        animation-name: layer;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
       }
 
       .layer-5 {
@@ -113,6 +141,11 @@
         bottom: 0;
         right: 30px;
         height: 250px;
+        /* After 4 */
+        animation-name: layer;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
       }
 
       .layer-7 {
@@ -168,6 +201,7 @@
         width: 10px;
         height: 50px;
         position: absolute;
+        top: -10px;
         left: 15px;
       }
 
@@ -187,6 +221,7 @@
         width: 10px;
         height: 50px;
         position: absolute;
+        top: -10px;
         right: 15px;
       }
 
@@ -262,6 +297,7 @@
         width: 100%;
         border-radius: 20px 20px 0 0;
       }
+
       .zigzag {
         background: linear-gradient(
               135deg,
@@ -276,6 +312,21 @@
         height: 30px;
         width: 100%;
       }
+
+      .score {
+        color: var(--light-brown);
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        margin: 0;
+        text-align: center;
+      }
+      input:checked {
+      counter-increment: score;
+    }
+
+    .score::after {
+      content: counter(score);
+    }
     </style>
   </head>
 
@@ -296,6 +347,7 @@
       </div>
       <!--bunny 1-->
       <div class="layer layer-2">
+        <input type="checkbox" />
         <div class="left-ear--outer"></div>
         <div class="left-ear--inner"></div>
         <div class="right-ear--outer"></div>
@@ -349,6 +401,8 @@
       <!--lawn 2 -->
       <div class="layer-10"></div>
       <!--lawn 3 -->
+      <h1 class="title">ATRAPALPIKA</h1>
+      <h2 class="score">Score:   </h2>
     </div>
   </body>
 </html>
